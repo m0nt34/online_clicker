@@ -1,0 +1,199 @@
+@use "./variables.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&family=Mandali&family=Nanum+Pen+Script&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+}
+#root {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+.main_cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 100vh;
+  width: 100%;
+  --color: rgba(255, 255, 255, 0.025);
+
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25.8%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75.8%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25.8%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75.8%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+
+  background-size: 100px 100px;
+  font-family: "Space Mono";
+  .total_count_main_cont {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white_grey;
+    }
+    .total_count_wrapper {
+      display: flex;
+      gap: 8px;
+      color: $purple;
+      .count_digit {
+        font-size: 24px;
+        background-color: $main_grey;
+        padding: 12px;
+        border-radius: 8px;
+        border: 2px $outline_grey solid;
+      }
+    }
+  }
+  .bottom_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 700px;
+    .villain_main_cont {
+      width: 100%;
+      background-color: $main_grey;
+      border: 2px $outline_grey solid;
+      border-radius: 12px 12px 6px 6px;
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white_grey;
+        border-bottom: 2px $outline_grey solid;
+        padding: 12px;
+        .header_left_side_cont {
+          display: flex;
+          align-items: center;
+          svg {
+            &:first-child {
+              margin-right: 6px;
+            }
+          }
+          .time_cont {
+            span {
+              color: $purple;
+            }
+          }
+        }
+        .header_right_side_cont {
+          display: flex;
+          align-items: center;
+          span {
+            color: $purple;
+            margin: 0 5px;
+          }
+        }
+      }
+      .mocking_text {
+        padding: 12px;
+        color: $white;
+      }
+    }
+    .buttons_main_cont {
+      width: 100%;
+      background-color: $main_grey;
+      border: 2px $outline_grey solid;
+      border-radius: 6px 6px 12px 12px;
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px;
+        color: $white_grey;
+        .left_cont {
+          span {
+            color: $purple;
+          }
+        }
+        .right_cont {
+          span {
+            background-color: $outline_grey;
+            border-radius: 4px;
+            padding: 0 6px;
+          }
+        }
+      }
+    }
+    .status_cooldown_cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      .status_cooldown_wrapper {
+        width: 100%;
+        height: 2px;
+        background-color: $outline_grey;
+      }
+      .modifiers {
+        display: flex;
+        align-items: center;
+        color: $white_grey;
+        border: 2px $outline_grey solid;
+        border-top: none;
+        padding: 4px 6px;
+        border-radius: 0 0 6px 6px;
+        gap: 4px;
+      }
+    }
+    .buttons_cont {
+      display: flex;
+      gap: 10px;
+      padding: 16px 12px;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33.33%;
+        background-color: transparent;
+        border: 2px $outline_grey solid;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 12px;
+        transition: background 0.2s;
+        &:hover {
+          background-color: rgba(63, 63, 63, 0.25);
+        }
+      }
+    }
+  }
+}
